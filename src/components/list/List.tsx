@@ -1,6 +1,5 @@
 import * as React from 'react';
 import { ICharacter } from '../../mockDataInterface';
-import { list } from './../../mock';
 import './list.css';
 
 interface IListItem {
@@ -15,14 +14,18 @@ class ListItem extends React.Component<IListItem> {
     </div>
   }
 }
-export default class List extends React.Component<{}> {
+
+interface IListComponent {
+  data: ICharacter[];
+}
+export default class List extends React.Component<IListComponent> {
     public render() {
-      const results = list.results;
-      if (!results.length) {
+      const {data} = this.props;
+      if (!data.length) {
         return <div> Nothing here - move along</div>;
       }
       return <div>{
-        results.map((singleResult, index) => <ListItem key={index} data={singleResult} />)
+        data.map((singleResult, index) => <ListItem key={index} data={singleResult} />)
       }</div>;
     }
 }
