@@ -1,0 +1,6 @@
+.List-Item {
+  padding: 10px;
+  background-color: #D5CCBC;
+  border-bottom: 1px solid gray;
+  cursor: pointer;
+}

@@ -2,7 +2,7 @@ type GenderType = 'Male' | 'Female';
 type SpeciesType = 'Human';
 type StatusType = 'Alive';
 
-interface ICharacter {
+export interface ICharacter {
   created: string;
   episode: string[];
   gender: GenderType;
