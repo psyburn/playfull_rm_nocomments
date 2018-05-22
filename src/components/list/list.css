@@ -3,4 +3,12 @@
   background-color: #D5CCBC;
   border-bottom: 1px solid gray;
   cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+.List-Item-Image {
+  height: 40px;
+}
+.List-Item-Text {
+  padding-left: 10px;
 }
