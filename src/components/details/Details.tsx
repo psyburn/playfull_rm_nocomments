@@ -1,6 +1,4 @@
 import * as React from 'react';
-import { RouteComponentProps } from 'react-router';
-import { list } from '../../mock';
 
 import { ICharacter } from '../../mockDataInterface';
 import './details.css';
@@ -9,16 +7,9 @@ interface IDetailsComponent {
   character: ICharacter;
 }
 
-interface IRouteParams {
-  id: string;
-}
-
-export default class Details extends React.Component<IDetailsComponent & RouteComponentProps<IRouteParams>> {
+export default class Details extends React.Component<IDetailsComponent> {
   public render() {
-    // const { character } = this.props;
-    const id = parseInt(this.props.match.params.id, 10);
-    const character = list.results.find((item) => item.id === id)
-    console.log(character);
+    const { character } = this.props;
     return character && <div>
         <div className='Details-Avatar'>
           <img src={character.image} />
