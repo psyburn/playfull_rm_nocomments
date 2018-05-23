@@ -1,16 +1,25 @@
 import * as React from 'react';
-import { ICharacter } from '../../mockDataInterface';
+import { RouteComponentProps } from 'react-router';
+import { list } from '../../mock';
 
+import { ICharacter } from '../../mockDataInterface';
 import './details.css';
 
 interface IDetailsComponent {
   character: ICharacter;
 }
 
-export default class Details extends React.Component<IDetailsComponent> {
+interface IRouteParams {
+  id: string;
+}
+
+export default class Details extends React.Component<IDetailsComponent & RouteComponentProps<IRouteParams>> {
   public render() {
-    const { character } = this.props;
-    return <div>
+    // const { character } = this.props;
+    const id = parseInt(this.props.match.params.id, 10);
+    const character = list.results.find((item) => item.id === id)
+    console.log(character);
+    return character && <div>
         <div className='Details-Avatar'>
           <img src={character.image} />
         </div>
