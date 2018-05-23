@@ -1,0 +1,12 @@
+.Details-Avatar {
+  text-align: center;
+}
+
+.Details-List > div {
+  padding: 5px;
+  border-bottom: 1px solid #1c7112;
+}
+
+.Details-List-Label {
+  font-weight: bold;
+}
