@@ -2,8 +2,8 @@ import * as React from 'react';
 import { connect } from 'react-redux';
 import { RouteComponentProps } from 'react-router';
 
-import Details from '../../components/details/Details';
 import { ICharacter } from '../../mockDataInterface';
+import Details from './components/Details';
 import { singleCharacterSelector } from './state/selectors';
 
 interface IRouteParams {

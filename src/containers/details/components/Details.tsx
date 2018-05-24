@@ -1,6 +1,6 @@
 import * as React from 'react';
 
-import { ICharacter } from '../../mockDataInterface';
+import { ICharacter } from '../../../mockDataInterface';
 import './details.css';
 
 interface IDetailsComponent {

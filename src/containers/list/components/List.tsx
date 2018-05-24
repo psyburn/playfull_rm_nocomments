@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { Link } from 'react-router-dom';
 
-import { ICharacter } from '../../mockDataInterface';
+import { ICharacter } from '../../../mockDataInterface';
 import './list.css';
 
 interface IListItem {

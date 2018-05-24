@@ -1,8 +1,8 @@
 import * as React from 'react';
 import { connect } from 'react-redux';
 
-import List from '../../components/list/List';
 import { ICharacter } from '../../mockDataInterface';
+import List from './components/List';
 import { addData } from './state/actions';
 import { characterListSelector } from './state/selectors'
 
