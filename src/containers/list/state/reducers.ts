@@ -1,7 +1,7 @@
 import { ICharacter } from '../../../mockDataInterface';
 import * as a from './actions';
 
-interface IState {
+export interface IState {
   list: ICharacter[];
 }
 

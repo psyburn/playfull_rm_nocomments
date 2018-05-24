@@ -4,6 +4,7 @@ import { connect } from 'react-redux';
 import List from '../../components/list/List';
 import { ICharacter } from '../../mockDataInterface';
 import { addData } from './state/actions';
+import { characterListSelector } from './state/selectors'
 
 import { list } from '../../mock';
 
@@ -24,7 +25,7 @@ class ListContainer extends React.Component<IListContainer> {
 }
 
 const mapStateToProps = (state):Partial<IListContainer> => ({
-  list: state.characters.list,
+  list: characterListSelector(state),
 });
 
 const mapDispatchToProps:Partial<IListContainer> = {
