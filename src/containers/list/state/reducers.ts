@@ -1,4 +1,4 @@
-import { ICharacter } from '../../../mockDataInterface';
+import { ICharacter } from '../../../dataInterface';
 import * as a from './actions';
 
 export interface IState {

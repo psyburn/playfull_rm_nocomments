@@ -1,21 +1,20 @@
 import * as React from 'react';
 import { connect } from 'react-redux';
 
-import { ICharacter } from '../../mockDataInterface';
+import { ICharacter } from '../../dataInterface';
 import List from './components/List';
-import { addData } from './state/actions';
+import { requestCharacters } from './state/actions';
 import { characterListSelector } from './state/selectors'
 
-import { list } from '../../mock';
 
 interface IListContainer {
   list: ICharacter[];
-  addToList(data: ICharacter[]): void;
+  getList(): void;
 }
 
 class ListContainer extends React.Component<IListContainer> {
   public componentWillMount() {
-    this.props.addToList(list.results);
+    this.props.getList();
   }
 
   public render() {
@@ -29,7 +28,7 @@ const mapStateToProps = (state):Partial<IListContainer> => ({
 });
 
 const mapDispatchToProps:Partial<IListContainer> = {
-  addToList: addData,
+  getList: requestCharacters,
 };
 
 export default connect(mapStateToProps, mapDispatchToProps)(ListContainer)
